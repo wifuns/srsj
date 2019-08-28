@@ -499,7 +499,9 @@ public class RtmpHandshake {
         byte[] actual = new byte[DIGEST_SIZE];
         in.getBytes(digestOffset, actual);
         if (!Arrays.equals(actual, expected)) {
-            throw new RuntimeException("client part 2 validation failed");
+        	//这块需要学习一下red5
+        	return ;
+           // throw new RuntimeException("client part 2 validation failed");
         }
         logger.info("client part 2 validation success");
     }
